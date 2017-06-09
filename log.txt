@@ -1,0 +1,5 @@
+2017.6.8 初步创建项目 开始写 index登录页和 resiger注册页 并在resiger页通过JQ来验证密码和确认密码是否一致
+6/8/2017 initial creation of the project begins by writing the "index" login page and the "resiger" registration page, and on the resiger page, through the JQ to verify the password and verify the password is consistent
+
+2017.6.9 对resiger加入表单验证和session会话控制 表单验证通过 $.get方式确认username是否被注册 通过获取session来确认是否已经login 如果login才能对数据库进行查询用户信息
+6/9/2017 the resiger with the form validation and  session control username form.validation is registered by obtaining session to confirm whether login，login can have if the query user information confirmed by $.get
