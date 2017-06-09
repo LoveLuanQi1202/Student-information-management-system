@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>我的主页</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+	<style>
+
+		.nav a{
+			color: #5E5E5E;
+		}
+		.content{
+			width: 100%;
+			height: 100%;
+			float: left;
+			position: relative;
+		}
+		.left{
+			position: absolute;
+			top: 50px;
+			left: 0;
+			width: 20%;
+			height: 200px;
+			background-color: #000000;
+		}
+		.c-con{
+			position: absolute;
+			left:20% ;
+			top: 50px;
+			width: 50%;
+		}
+		.text-box{
+
+			width: 100%;
+			height: 300px;
+			border: 1px solid white;
+			border-radius: 20px;
+		}
+		.head{
+			width: 100%;
+			height: 30px;
+			background-color: white;
+		}
+		.text{
+			height: 250px;
+			width: 100%;
+			padding: 10px 10%;
+		}
+		.text textarea{
+			height: 200px;
+			width: 100%;
+			resize: none;
+		}
+
+		.right{
+			position: absolute;
+			left: 70%;
+			top: 50px;
+			width: 30%;
+			height: 200px;
+			background-color: #269ABC;
+		}
+	</style>
+</head>
+
+<body>
+	<%data.forEach(function(item){%>
+
+	<div class="container">
+		<nav class="nav nav-pills">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">我的主页</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">学院首页 <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">院系首页</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">xxx</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="logout">注销登录</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%=item.stuname%><span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">个人信息</a></li>
+            <li><a href="#">我的留言板</a></li>
+            <li><a href="#">xxxxx</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">打开QQ</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+		<div class="content">
+			<div class="left">这是导航</div>
+			<div class="c-con">
+				<div class="text-box panel-primary">
+					<div class="panel-heading">
+						<h5>快速留言</h5>
+					</div>
+					<form class="text panel-body">
+						<textarea maxlength="150"></textarea>
+						<button type="submit" class="btn btn-success col-md-3 pull-right">提交</button>
+					</form>
+				</div>
+				<div class="info">这里定义同学们的简历以及他们的like</div>
+			</div>
+			<div class="right">这是同学们的</div>
+		</div>
+
+
+	</div>
+	<%})%>
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js" ></script>
+	<script type="text/javascript" src="js/bootstrap.min.js" ></script>
+</body>
+</html>

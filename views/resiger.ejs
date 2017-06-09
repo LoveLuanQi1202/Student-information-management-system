@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>注册</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+		<style type="text/css">
+			body,html{
+				height: 150%;
+				width: 100%;
+			}
+			.container-fluid{
+				width: 50%;
+				font-weight: 600;
+			}
+			.img-fluid{
+				padding: 50px 0;
+
+			}
+
+		</style>
+	</head>
+	<body>
+		<div class="container-fluid">
+			<div class="img-fluid">
+			<img src="images/timg.jpg" height="250px" width="100%" style="border-radius: 10px;" />
+			</div>
+			<!-- username-->
+			<form class="form-horizontal" method="post" action="doresiger">
+				<div class="form-group row" id="divusername">
+					<label for="username" class="form-control-label col-md-2">学号:</label>
+					<div class="col-md-10">
+						<input type="number" name="username" id="username" class="form-control" placeholder="请输入用户名" min="1407010101" max="1407010140" required="required" />
+					</div>
+				</div>
+				<!-- password-->
+				<div class="form-group row" id="divpwd">
+					<label for="password" class="form-control-label col-md-2">密码:</label>
+					<div class="col-md-10">
+						<input type="password" name="password" id="password" class="form-control" placeholder="请输入密码" required="required"/>
+					</div>
+				</div>
+				<!--passwordconfirm-->
+				<div class="form-group row" id="divpwdc">
+					<label for="pwdconfirm" class="form-control-label col-md-2">确认密码:</label>
+					<div class="col-md-10">
+						<input type="password" name="pwdconfirm" id="pwdconfirm" class="form-control" placeholder="请再次输入密码" required="required"/>
+					</div>
+				</div>
+				<!-- stuname-->
+				<div class="form-group row">
+					<label for="stuname" class="form-control-label col-md-2">姓名:</label>
+					<div class="col-md-10">
+						<input type="text" name="stuname" id="stuname" class="form-control" placeholder="请输入姓名" maxlength="5" required="required"/>
+					</div>
+				</div>
+				<!--age-->
+				<div class="form-group row">
+					<label for="age" class="form-control-label col-md-2">年龄:</label>
+					<div class="col-md-10">
+						<input type="number" name="age" id="age" class="form-control" placeholder="请输入年龄" min="10" required="required"/>
+					</div>
+				</div>
+				<!-- sex-->
+				<div class="form-group row">
+					<label for="sex" class="form-control-label col-md-2">性别:</label>
+					<div class="col-md-10 ">
+						<label class="radio-inline col-md-2">
+                        <input type="radio" name="sex" id="sex" value="1" checked="checked"> 男
+                        </label>
+						<label class="radio-inline col-md-2">
+                        <input type="radio" name="sex" id="sex" value="2"> 女
+                        </label>
+					</div>
+				</div>
+				<!--teachlevel-->
+				<div class="form-group row">
+					<label for="teachlevel" class="form-control-label col-md-2">最高学历</label>
+					<div class="col-md-10">
+						<select class="form-control" name="teachlevel">
+							<option value="1">本科</option>
+							<option value="2">硕士</option>
+						</select>
+					</div>
+				</div>
+				<!--phone-->
+				<div class="form-group row">
+					<label for="phone" class="form-control-label col-md-2">手机号:</label>
+					<div class="col-md-10">
+						<input type="number" name="phone" id="phone" class="form-control" placeholder="请输入手机号" max="19000000000" required/>
+					</div>
+				</div>
+				<!-- mail-->
+				<div class="form-group row">
+					<label for="email" class="form-control-label col-md-2">Email:</label>
+					<div class="col-md-10">
+						<input type="email" name="email" id="email" class="form-control" placeholder="xxxx@qq.com"  />
+					</div>
+				</div>
+				<hr />
+				<!--school-->
+				<div class="form-group row">
+					<label for="school" class="form-control-label col-md-2">教育经历:</label>
+
+					<div class="col-md-10">
+						<input type="text" name="school" id="school" class="form-control" placeholder="请输入最高学历 如:“2014.06 -2018.09 武汉学院 计算机 本科”" required="required"/>
+					</div>
+				</div>
+
+				<!--teachexp-->
+				<div class="form-group">
+					<label for="teachexp" class="form-control-label">培训经历:</label>
+					<div class="col-md-12">
+						<textarea maxlength="150" name="teachexp" id="teachexp" class="form-control"   style="height: 90px;width: 100%;resize: none;" />
+						</textarea>
+					</div>
+				</div>
+
+				<!--workexp-->
+				<div class="form-group">
+					<label for="workexp" class="form-control-label">工作经验:</label>
+					<div class="col-md-12">
+						<textarea maxlength="150" name="workexp" id="workexp" class="form-control"   style="height: 100px;width: 100%;resize: none;"/>
+						</textarea>
+					</div>
+				</div>
+
+				<!--gold-->
+				<div class="form-group">
+					<label for="gold" class="form-control-label">获奖经历:</label>
+					<div class="col-md-12">
+						<textarea maxlength="150" name="gold" id="gold" class="form-control"   style="height: 100px;width: 100%;resize: none;"/>
+						</textarea>
+					</div>
+				</div>
+
+				<!--introduce-->
+				<div class="form-group">
+					<label for="introduce" class="form-control-label">自我评价:</label>
+					<div class="col-md-12">
+						<textarea maxlength="150" name="introduce" id="introduce" class="form-control"   style="height: 140px;width: 100%;resize: none;"/>
+						</textarea>
+					</div>
+				</div>
+
+				<div class="form-group row">
+				<button type="submit" id="submit" class="btn btn-outline-primary col-md-5">提交</button>
+				<button type="reset" class="btn btn-outline-danger col-md-5 offset-2">重置</button>
+				</div>
+			</form>
+
+
+
+		</div>
+
+		<script src="javascripts/jquery-3.2.1.min.js"></script>、
+		<script>
+		var pass='';
+			$("#username").change(function(e){
+
+				var username= $(e.target).val()
+			$.ajax({
+				url:'/res/'+username,
+				success:function(data){
+					if(data=='no'){
+						$("#divusername").removeClass('has-success');
+						$("#divusername").addClass('has-danger');
+						$("#username").after('<label class="control-label text-danger text-sm-left" id="username1" for="username">该账号已被注册</label>')
+						pass=false;
+					}else if(data=='ok'){
+						$("#divusername").removeClass('has-danger');
+						$("label").remove('#username1');
+						$("#divusername").addClass('has-success');
+						pass=true;
+					}
+				}
+			});
+			});
+			var password=$("#password");
+			var passwordc=$("#pwdconfirm");
+			$("form:first").submit(function(){
+				if(pass==false) return false;
+				if(password.val().length<6&&passwordc.val().length<6){
+					$('label').remove('#mimaxiao1').remove('#mimaxiao2').remove('#mimabuyizhi');
+					$('#divpwd').addClass('has-danger');
+					password.after('<label class="control-label text-danger text-sm-left" id="mimaxiao1" for="pwdconfirm">密码需要大于6位</label>');
+					$('#divpwdc').addClass('has-danger');
+					passwordc.after('<label class="control-label text-danger text-sm-left" id="mimaxiao2" for="pwdconfirm">密码需要大于6位</label>');
+					return false;
+				}
+				else if(password.val().length<6){
+					$('#divpwdc').removeClass('has-danger');
+					$('label').remove('#mimaxiao1').remove('#mimaxiao2').remove('#mimabuyizhi');
+					$('#divpwd').addClass('has-danger');
+					password.after('<label class="control-label text-danger text-sm-left" id="mimaxiao1" for="pwdconfirm">密码需要大于6位</label>');
+					return false;
+				}
+				else if(passwordc.val().length<6){
+					$('#divpwd').removeClass('has-danger');
+					$('label').remove('#mimaxiao1').remove('#mimaxiao2').remove('#mimabuyizhi');
+					$('#divpwdc').addClass('has-danger');
+					passwordc.after('<label class="control-label text-danger text-sm-left" id="mimaxiao2" for="pwdconfirm">密码需要大于6位</label>');
+					return false;
+				}
+				else if(password.val() === passwordc.val()){
+
+					return true;
+				}else{
+					$('#divpwd').removeClass('has-danger');
+					$('label').remove('#mimaxiao1').remove('#mimaxiao2').remove('#mimabuyizhi');
+					$('#divpwdc').addClass('has-danger');
+					passwordc.after('<label class="control-label text-danger text-sm-left" id="mimabuyizhi" for="pwdconfirm">请保持两次输入密码一致</label>');
+					return false;
+				}
+			});
+		</script>
+	</body>
+</html>

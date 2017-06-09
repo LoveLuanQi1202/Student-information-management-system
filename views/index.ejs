@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>登录</title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="css/animate.css"/>
+	<style>
+		body,html{
+			height: 100%;
+			width: 100%;
+			background-color: white;
+		}
+		.box{
+
+			color: darkgray;
+
+		}
+		.jumbotron{
+			background-color: white;
+		}
+		.foot{
+			padding: 15px;
+		}
+	</style>
+
+	<body>
+		<div class="container">
+			<center>
+			<div class="box jumbotron">
+				<h1 style="font-size: 120px;" class="animated fadeInDown">KNOWU</h1>
+				<p style="color: #636C72;font-weight: 600;" class="animated bounceIn">您可以选择以下两种方法进入系统</p>
+				<div class="foot animated fadeInUp">
+				<button class="btn btn-outline-info col-md-3" data-toggle="modal" data-target="#myModal">登录</button>
+				<button class="btn btn-outline-success col-md-3">注册</button>
+				</div>
+			</div>
+			</center>
+		</div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+      	<h4 class="modal-title" id="myModalLabel">登录</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+      <div class="modal-body">
+        <form action="/dologin" class="form-horizontal" method="post">
+        	<div class="form-group" id="userdiv">
+        		<label for="username">用户名：</label>
+        		<input type="text" name="username" id="username" class="form-control" placeholder="请输入账号" required />
+        	</div>
+        	<div class="form-group">
+        		<label for="pwd">密码：</label>
+        		<input type="password" name="password" id="pwd" class="form-control" placeholder="请输入密码" required />
+        	</div>
+        	<button type="submit" class="btn btn-outline-success col-md-12" style="margin-bottom: 8px;margin-top: 2px;">登录</button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+		<script src="javascripts/jquery-3.2.1.min.js"></script>
+		<script src="javascripts/bootstrap.js"></script>
+		<script>
+			var height =$(".box").eq(0).css("height");
+			var body =$("body").css("height");
+			var t1=parseInt(body)/2-parseInt(height)/2;
+			$(".box").eq(0).css("padding-top",t1);
+			$(".foot >button:last").click(function(){
+				window.open("/resiger","_blank");
+			});
+			$("#username").change(function(e){
+				var x=$(e.target).val();
+				if(x<=1407010100 || x>1407010139){
+					$("#userdiv").addClass("has-danger");
+					$("button:last").attr("disabled",true);
+				}else{
+					$("#userdiv").removeClass("has-danger");
+					$("button:last").attr("disabled",false);
+				}
+			});
+		</script>
+	</body>
+</html>
